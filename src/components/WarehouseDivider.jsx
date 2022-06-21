@@ -158,15 +158,6 @@ const WarehouseDivider = () => {
                     renderItem={(order) => (
                     <List.Item>
                         <List.Item.Meta
-                            // avatar={
-                            //     <Avatar
-                            //         style={{
-                            //             backgroundColor: "#f7ce4d",
-                            //             verticalAlign: "middle",
-                            //         }}
-                            //         icon={<ContainerFilled />}
-                            //     />
-                            // }
                             title={<a>{order.ordercode}</a>}
                             description={order.sendername + " - " + order.senderphone}
                         />
@@ -183,38 +174,171 @@ const WarehouseDivider = () => {
                         gridTemplateColumns : '1fr 1fr 1fr',
                         alignItems: 'initial'
                     }}>
-                    <Multiselect
-                        displayValue="ordercode"
-                        onKeyPressFn={function noRefCheck(){}}
-                        onRemove={function noRefCheck(){}}
-                        onSearch={function noRefCheck(){}}
-                        onSelect={function noRefCheck(){}}
-                        options={orders}
-                        placeholder="Khu 1"
-                    />
-                    <Multiselect
-                        displayValue="ordercode"
-                        onKeyPressFn={function noRefCheck(){}}
-                        onRemove={function noRefCheck(){}}
-                        onSearch={function noRefCheck(){}}
-                        onSelect={function noRefCheck(){}}
-                        options={orders}
-                        placeholder="Khu 2"
-                    />
-                    <Multiselect
-                        displayValue="ordercode"
-                        onKeyPressFn={function noRefCheck(){}}
-                        onRemove={function noRefCheck(){}}
-                        onSearch={function noRefCheck(){}}
-                        onSelect={function noRefCheck(){}}
-                        options={orders}
-                        placeholder="Khu 3"
-                    />
+                        <Space style={{display: 'block'}}>
+                            <Multiselect
+                                displayValue="ordercode"
+                                onKeyPressFn={function noRefCheck(){}}
+                                onRemove={function noRefCheck(){}}
+                                onSearch={function noRefCheck(){}}
+                                onSelect={function noRefCheck(){}}
+                                options={orders}
+                                placeholder="Khu 1"
+                            />
+                            <Button type="primary" style={{marginTop: "10px"}}>Chọn hàng</Button>
+                        </Space>
+                        <Space style={{display: 'block'}}>
+                            <Multiselect
+                                displayValue="ordercode"
+                                onKeyPressFn={function noRefCheck(){}}
+                                onRemove={function noRefCheck(){}}
+                                onSearch={function noRefCheck(){}}
+                                onSelect={function noRefCheck(){}}
+                                options={orders}
+                                placeholder="Khu 2"
+                            />
+                            <Button type="primary" style={{marginTop: "10px"}}>Chọn hàng</Button>
+                        </Space>
+                        <Space style={{display: 'block'}}>
+                            <Multiselect
+                                displayValue="ordercode"
+                                onKeyPressFn={function noRefCheck(){}}
+                                onRemove={function noRefCheck(){}}
+                                onSearch={function noRefCheck(){}}
+                                onSelect={function noRefCheck(){}}
+                                options={orders}
+                                placeholder="Khu 3"
+                            />
+                            <Button type="primary" style={{marginTop: "10px"}}>Chọn hàng</Button>
+                        </Space>
+                </Space>
+                <Space direction="vertical" style={{
+                        display: 'grid',
+                        gridTemplateColumns : '1fr 1fr',
+                        alignItems: 'initial'
+                    }}>
+                    <Card style={{height: "100%",border:"true" }}>
+                        <p style={{fontWeight: 'bold'}}>Khu: 1</p>
+                        <Space style={{display:"block"}}>
+                                <Space style={{display:"flex",justifyContent: 'space-between'}}>
+                                    <Multiselect
+                                    displayValue="ordercode"
+                                    onKeyPressFn={function noRefCheck(){}}
+                                    onRemove={function noRefCheck(){}}
+                                    onSearch={function noRefCheck(){}}
+                                    onSelect={function noRefCheck(){}}
+                                    options={orders}
+                                    placeholder="Hàng 1"
+                                    />
+                                    <Button type="primary"> Chọn kệ</Button>
+                                </Space>
+                                <Space style={{display:"flex",justifyContent: 'space-between',marginTop:'10px'}}>
+                                    <Multiselect
+                                    displayValue="ordercode"
+                                    onKeyPressFn={function noRefCheck(){}}
+                                    onRemove={function noRefCheck(){}}
+                                    onSearch={function noRefCheck(){}}
+                                    onSelect={function noRefCheck(){}}
+                                    options={orders}
+                                    placeholder="Hàng 2"
+                                    />
+                                    <Button type="primary"> Chọn kệ</Button>
+                                </Space>
+                                <Space style={{display:"flex",justifyContent: 'space-between',marginTop:'10px'}}>
+                                    <Multiselect
+                                    displayValue="ordercode"
+                                    onKeyPressFn={function noRefCheck(){}}
+                                    onRemove={function noRefCheck(){}}
+                                    onSearch={function noRefCheck(){}}
+                                    onSelect={function noRefCheck(){}}
+                                    options={orders}
+                                    placeholder="Hàng 3"
+                                    />
+                                    <Button type="primary"> Chọn kệ</Button>
+                                </Space>
+                                <Space style={{display:"flex",justifyContent: 'space-between',marginTop:'10px'}}>
+                                    <Multiselect
+                                    displayValue="ordercode"
+                                    onKeyPressFn={function noRefCheck(){}}
+                                    onRemove={function noRefCheck(){}}
+                                    onSearch={function noRefCheck(){}}
+                                    onSelect={function noRefCheck(){}}
+                                    options={orders}
+                                    placeholder="Hàng 4"
+                                    />
+                                    <Button type="primary"> Chọn kệ</Button>
+                                </Space>
+                        </Space>
+                    </Card>
+                    <Card style={{ height: "100%",border:"true" }}>
+                        <p style={{fontWeight: 'bold'}}>Hàng: 1</p>
+                        <Space style={{display:"block"}}>
+                                <Space>
+                                    <Multiselect
+                                    displayValue="ordercode"
+                                    onKeyPressFn={function noRefCheck(){}}
+                                    onRemove={function noRefCheck(){}}
+                                    onSearch={function noRefCheck(){}}
+                                    onSelect={function noRefCheck(){}}
+                                    options={orders}
+                                    placeholder="Kệ 1"
+                                    />
+                                </Space>
+                                <Space style={{marginTop:'10px'}}>
+                                    <Multiselect
+                                    displayValue="ordercode"
+                                    onKeyPressFn={function noRefCheck(){}}
+                                    onRemove={function noRefCheck(){}}
+                                    onSearch={function noRefCheck(){}}
+                                    onSelect={function noRefCheck(){}}
+                                    options={orders}
+                                    placeholder="Kệ 2"
+                                    />
+                                </Space>
+                                <Space style={{marginTop:'10px'}}>
+                                    <Multiselect
+                                    displayValue="ordercode"
+                                    onKeyPressFn={function noRefCheck(){}}
+                                    onRemove={function noRefCheck(){}}
+                                    onSearch={function noRefCheck(){}}
+                                    onSelect={function noRefCheck(){}}
+                                    options={orders}
+                                    placeholder="Kệ 3"
+                                    />
+                                </Space>
+                                <Space style={{marginTop:'10px'}}>
+                                    <Multiselect
+                                    displayValue="ordercode"
+                                    onKeyPressFn={function noRefCheck(){}}
+                                    onRemove={function noRefCheck(){}}
+                                    onSearch={function noRefCheck(){}}
+                                    onSelect={function noRefCheck(){}}
+                                    options={orders}
+                                    placeholder="Kệ 4"
+                                    />
+                                </Space>
+                        </Space>
+                    </Card>
+                </Space>
+                <Space style={{display:'flex',justifyContent: 'flex-end',marginTop:"20px"}}>
+                    <Button type="primary">Xác nhận</Button>
                 </Space>
             </Card>
 
             <Card style={{ height: "100%" }}>
                 <Divider orientation="left">Đơn không lưu kho</Divider>
+                <List
+                    style={{ height: "300px", overflow: "auto" }}
+                    itemLayout="horizontal"
+                    dataSource={orders}
+                    renderItem={(order) => (
+                    <List.Item>
+                        <List.Item.Meta
+                            title={<a>{order.ordercode}</a>}
+                            description={order.sendername + " - " + order.senderphone}
+                        />
+                    </List.Item>
+                    )}
+                />
             </Card>
         </Space>
     </>
